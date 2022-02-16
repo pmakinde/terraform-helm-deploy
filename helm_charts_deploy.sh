@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# update kubeconfig
-cd ../terraform-provision-eks-cluster; aws eks --region $(terraform output -raw region) update-kubeconfig --name $(terraform output -raw cluster_name)
-
-
 
 # deploy GitLab runner
 cd ../terraform-helm-deploy
