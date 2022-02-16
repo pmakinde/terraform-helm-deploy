@@ -1,10 +1,5 @@
 #!/bin/bash
 
-
-# deploy GitLab runner
-helm repo add gitlab https://charts.gitlab.io
-helm install --namespace dwp-cc-dev gitlab-runner -f values.yaml gitlab/gitlab-runner
-
 # deploy cert manager
 helm repo add jetstack https://charts.jetstack.io
 helm install cert-manager jetstack/cert-manager --namespace dwp-cc-dev --version v1.7.1 --set installCRDs=true
