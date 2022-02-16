@@ -2,7 +2,6 @@
 
 
 # deploy GitLab runner
-cd ../terraform-helm-deploy
 helm repo add gitlab https://charts.gitlab.io
 helm install --namespace dwp-cc-dev gitlab-runner -f values.yaml gitlab/gitlab-runner
 
